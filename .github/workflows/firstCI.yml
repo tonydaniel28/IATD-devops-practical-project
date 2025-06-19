@@ -12,7 +12,7 @@ jobs:
         - name: Set up Node.js
           uses: actions/setup-node@v4
           with:
-            node-version: '21.1.1'
+            node-version: '21'
             cache: 'npm'
 
         - name: Install Jest

@@ -1,7 +1,6 @@
-name: First CI Workflow
-
+name: My First CI Workflow
 on: push
-     
+# This workflow is triggered on push events to the repository.
 jobs:
     Initialize_and_test:
       runs-on: ubuntu-latest

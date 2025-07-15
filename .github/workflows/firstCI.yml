@@ -23,3 +23,22 @@ jobs:
         - name: Run tests
           run: npm test
 
+        - name: Docker Login
+          uses: docker/login-action@v3
+          with:
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+        - name: Set up Docker Buildx
+          run : docker/setup-buildx-action@v3
+        
+        - name: Docker push
+          run : docker/build-push-action@v5
+
+        - name: Build and push Docker image
+          uses: docker/build-push-action@v5
+          with:
+            context: .
+            file: ./Dockerfile
+            push: true
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/jest-testing:latest

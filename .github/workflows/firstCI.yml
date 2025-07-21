@@ -27,6 +27,14 @@ jobs:
       runs-on: ubuntu-latest
       needs: Initialize_and_test
       steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+        
+        - name: Debug directory listing
+          run: |
+            echo "PWD: $(pwd)"
+            ls -la
+      
         - name: Docker Login
           uses: docker/login-action@v3
           with:
@@ -40,6 +48,6 @@ jobs:
           uses: docker/build-push-action@v5
           with:
             context: .
-            file: Dockerfile
+            file: ./Dockerfile
             push: true
             tags: ${{secrets.DOCKERHUB_USERNAME}}/jest-testing:test-latest

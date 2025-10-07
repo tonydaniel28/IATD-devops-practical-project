@@ -41,7 +41,7 @@ test("isValidateString: wrong amount of date segment", () => {
 
 // Test for wrong number of digits in the day
 test("isValidateString: wrong number of digits in the day", () => {
-      expect(isValidDateString("00/11/2000")).toBe(false); //date <0 in a month
+    expect(isValidDateString("00/11/2000")).toBe(false); //date <0 in a month
     expect(isValidDateString("-1/10/2000")).toBe(false); // -ve date value
     expect(isValidDateString("30/02/2000")).toBe(false); //30 days in Feb
     expect(isValidDateString("31/04/2000")).toBe(false); //31 days in April

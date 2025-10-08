@@ -3,4 +3,3 @@ export default {
 //  transform: {}, // required for ESM support
 reporters: ["default", "github-actions"],
 }
- 

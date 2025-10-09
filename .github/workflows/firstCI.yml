@@ -45,10 +45,11 @@ jobs:
         # - name: Set up Docker Buildx
         #   uses : docker/setup-buildx-action@v3
       
-        # - name: Build and push Docker image
-        #   uses: docker/build-push-action@v5
-        #   with:
-        #     context: .
-        #     file: ./Dockerfile
-        #     push: true
-        #     tags: ${{secrets.DOCKERHUB_USERNAME}}/jest-testing:test-latest
+        - name: Build and push Docker image
+          uses: docker/build-push-action@v5
+          with:
+            context: .
+            file: ./Dockerfile
+            push: true
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/jest-testing:latest
+

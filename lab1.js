@@ -6,3 +6,5 @@ console.log('Welcome to DevOps ' + myName)
 
 console.log("Test")
 console.log("Test 2")
+
+console.log("Added Docker pipeline")

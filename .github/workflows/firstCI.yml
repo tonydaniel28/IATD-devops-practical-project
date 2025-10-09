@@ -36,20 +36,3 @@ jobs:
             echo "PWD: $(pwd)"
             ls -la
       
-        # - name: Docker Login
-        #   uses: docker/login-action@v3
-        #   with:
-        #     username: ${{ secrets.DOCKERHUB_USERNAME }}
-        #     password: ${{ secrets.DOCKERHUB_PASSWORD }}
-
-        # - name: Set up Docker Buildx
-        #   uses : docker/setup-buildx-action@v3
-      
-        - name: Build and push Docker image
-          uses: docker/build-push-action@v5
-          with:
-            context: .
-            file: ./Dockerfile
-            push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/jest-testing:latest
-

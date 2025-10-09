@@ -51,4 +51,4 @@ jobs:
             context: .
             file: ./Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/tonydaniel28/iatd-devops-practical-project:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/tonydaniel28:latest

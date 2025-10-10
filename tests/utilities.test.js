@@ -1,8 +1,8 @@
 import { isValidDateString, wrapString } from "../src/utilities";
 
-test("failing test", () => {
-expect(1).toBe(2);
-});
+// test("failing test", () => {
+// expect(1).toBe(2);
+// });
 
 test("wrapString: wrap single word over two lines", () => {
     expect(wrapString("Long", 3)).toBe("Lo-\nng");

@@ -5,7 +5,7 @@ import { createItemEntry, printInventoryTable } from "./inventoryDisplay.js";
 const lineLength = 73;
 const mainMenuOptions = ["View current inventory", "Log inventory change", "EXIT"];
 const invChangeMenuOptions = ["Add/remove stock for existing item", "Add stock for new item"];
-const testVariable = "hello";
+// const testVariable = "hello";
 
 
 let itemCategories = ["Food", "Clothing", "Electronics"];

@@ -21,6 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run ESLint static analysis
+        run: npx eslint . -f json -o eslint_report.json
+        continue-on-error: true
+
+      - name: Annotate ESLint results
+        uses: ataylorme/eslint-annotate-action@v3
+        with:
+          only-pr-files: false
+          report-json: eslint_report.json
+
       - name: Run tests
         run: npm test
 
